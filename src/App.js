@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import Task from './Task';
+
+
 import logo from './logo.svg';
 
 import './app.scss';
@@ -23,38 +26,14 @@ function App() {
 
   return (
     <div className="App">
-        <ul>
-            {tasks.map( (task,idx) => {
-                return (
-                    <li key={task.id}>
-                        <details>
-                            <summary>
-                                <span onClick={_deleteTask}>{task.title}</span>
-                            </summary>
-                            <History history={task.history} />
-                        </details>
-                    </li>
-                )
-            })}
-        </ul>
+        <h1>Tasks</h1>
+        <Task tasks={tasks} api={API}/>
+
     </div>
   );
+
 }
 
-function History(props) {
-    return (
-        <ol>
-            {props.history.map( (record,idx) => {
-                return (
-                    <li key={idx}>
-                        <span>{record.timestamp}</span>
-                        <span>{record.action}</span>
-                    </li>
-                )
-            })}
-        </ol>
-    )
-}
 
 
 export default App;
