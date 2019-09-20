@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Task from './Task';
 
-
-import logo from './logo.svg';
-
 import './app.scss';
 
-const API = 'http://demodev.us-west-2.elasticbeanstalk.com/taskmaster/tasks'
+//const API = 'http://demodev.us-west-2.elasticbeanstalk.com/taskmaster/tasks';
+const API = 'https://lltrgze6rl.execute-api.us-west-2.amazonaws.com/dev/task';
+
 
 
 function App() {
@@ -18,11 +17,11 @@ function App() {
             .then( fetchedTasks => setTasks(fetchedTasks) );
     }
 
-    function _deleteTask(id) {
-        fetch()
-            .method()
-            .then()
-    }
+    // function _deleteTask(id) {
+    //     fetch()
+    //         .method()
+    //         .then()
+    // }
     useEffect( _getTasks, []);
 
   return (
