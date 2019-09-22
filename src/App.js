@@ -4,8 +4,8 @@ import Task from './Task';
 import './app.scss';
 
 //const API = 'http://demodev.us-west-2.elasticbeanstalk.com/taskmaster/tasks';
-const API = 'https://lltrgze6rl.execute-api.us-west-2.amazonaws.com/dev/task';
 
+const API ='https://04kiiaovkl.execute-api.us-west-2.amazonaws.com/dev/tasks';
 
 
 function App() {
